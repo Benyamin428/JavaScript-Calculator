@@ -11,7 +11,7 @@
   width: 100%;
 }
 .calculator .calculator__container {
-  background: black;
+  background: #000;
   padding: 1rem;
 }
 .calculator .calculator__container .calculator__screen {
@@ -26,6 +26,16 @@
 .calculator .calculator__container .calculator__buttons .calculator__buttons-btn {
   padding: 1rem;
   border-radius: 50%;
+  border: none;
+  color: #fff;
+  background: #313131;
+}
+.calculator .calculator__container .calculator__buttons .calculator__buttons-btn--settings {
+  background: #9F9F9F;
+  color: #000;
+}
+.calculator .calculator__container .calculator__buttons .calculator__buttons-btn--operations {
+  background: #F69A06;
 }
 .calculator .calculator__container .calculator__buttons .calculator__buttons-btn--elongated {
   grid-column: span 2;
