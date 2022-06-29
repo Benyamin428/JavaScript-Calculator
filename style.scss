@@ -12,6 +12,11 @@
 
     .calculator__container {
         background: black;
+        padding: 1rem;
+
+        .calculator__screen {
+            height: 10rem;
+        }
 
         .calculator__buttons {
             display: grid;
