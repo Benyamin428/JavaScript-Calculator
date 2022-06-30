@@ -19,6 +19,7 @@ $settings-color: #9F9F9F;
     .calculator__container {
         background: $background-color;
         padding: 1rem;
+        color: #fff;
 
         .calculator__screen {
             height: 10rem;
@@ -36,6 +37,7 @@ $settings-color: #9F9F9F;
                 border: none;
                 color: #fff;
                 background: $number-color;
+                font-size: 2rem;
 
                 &--settings {
                     background: $settings-color;
