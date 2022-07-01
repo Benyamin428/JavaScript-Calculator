@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
+
 .calculator {
   display: flex;
   align-items: center;
@@ -41,4 +46,8 @@
 }
 .calculator .calculator__container .calculator__buttons .calculator__buttons-btn--elongated {
   grid-column: span 2;
+}
+.calculator .calculator__container .calculator__buttons .calculator__buttons-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }

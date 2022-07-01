@@ -10,6 +10,11 @@ $settings-color: #9F9F9F;
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
 .calculator {
     display: flex;
     align-items: center;
@@ -50,6 +55,11 @@ $settings-color: #9F9F9F;
 
                 &--elongated {
                     grid-column: span 2;
+                }
+
+                &:hover {
+                    opacity: 0.5;
+                    cursor: pointer;
                 }
             }
         }
