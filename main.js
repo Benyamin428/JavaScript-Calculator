@@ -5,15 +5,26 @@ let displayValue = "";
 
 const handleButton = (event) => {
 
-    console.log("1");
+    console.log(value);
 
-    if (event.target.value == "+" || event.target.value == "-" || event.target.value == "x" || event.target.value == "/" || event.target.value == "%" || event.target.value == "=") {
+    if (event.target.value == "plus" || event.target.value == "minus" || event.target.value == "multiply" || event.target.value == "divide" || event.target.value == "percent" || event.target.value == "=") {
         equal();
     }
-
-    value+=event.target.value;
-    displayValue+=event.target.value ;
     
+    if (event.target.value == "switch") {
+        if (value.includes("=")) {
+            value = parseFloat(value.substring(0, value.length-1)*-1).toString();
+            displayValue = value;
+        }
+        else {
+            value = parseFloat(value*-1).toString();
+            displayValue = value;
+        }
+    }
+    else {
+        value+=event.target.value;
+        displayValue+=event.target.value ;
+    }
 
     if (/^-?[0-9]\d*(\.\d+)?$/.test(value[value.length-1]) || value[value.length-1] == ".") {
         document.getElementById("displayText").innerHTML = displayValue;
@@ -23,31 +34,33 @@ const handleButton = (event) => {
         displayValue = "";
         document.getElementById("displayText").innerHTML = displayValue;
     }
-    console.log(value);
+    else {
+        displayValue = "";
+    }
+   // console.log(value);
 }
 
 const equal = () => {
 
-    displayValue = "";
-
-    if (value.includes("+")) {
-        const expression = value.split("+");
+    if (value.includes("plus")) {
+        const expression = value.split("plus");
         value = parseFloat(expression[0]) + parseFloat(expression[1]);
     }
-    else if (value.includes("-")) {
-        const expression = value.split("-");
+    else if (value.includes("minus")) {
+        console.log(value)
+        const expression = value.split("minus");
         value = parseFloat(expression[0]) - parseFloat(expression[1]);
     }
-    else if (value.includes("x")) {
-        const expression = value.split("x");
+    else if (value.includes("multiply")) {
+        const expression = value.split("multiply");
         value = parseFloat(expression[0]) * parseFloat(expression[1]);        
     }
-    else if (value.includes("/")) {
-        const expression = value.split("/");
+    else if (value.includes("divide")) {
+        const expression = value.split("divide");
         value = parseFloat(expression[0]) / parseFloat(expression[1]);        
     }
-    else if (value.includes("%")) {
-        const expression = value.split("%");
+    else if (value.includes("percent")) {
+        const expression = value.split("percent");
         value = parseFloat(expression[0]/100);
     }
     else if (value.includes("=")) {
@@ -55,6 +68,7 @@ const equal = () => {
         value = parseFloat(expression[0]);
     }
     document.getElementById("displayText").innerHTML = value;
+    return;
 }
 
 calcButton.forEach(button => {
