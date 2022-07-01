@@ -1,19 +1,24 @@
+const calcButton = document.querySelectorAll(".calculator__buttons-btn");
+
 let value = "";
 let displayValue = "";
 
-const button = (item) => {
-    if (item == "+" || item == "-" || item == "x" || item == "/" || item == "%" || item == "=") {
+const handleButton = (event) => {
+
+    console.log("1");
+
+    if (event.target.value == "+" || event.target.value == "-" || event.target.value == "x" || event.target.value == "/" || event.target.value == "%" || event.target.value == "=") {
         equal();
     }
 
-    value+=item;
-    displayValue+=item;
+    value+=event.target.value;
+    displayValue+=event.target.value ;
     
 
     if (/^-?[0-9]\d*(\.\d+)?$/.test(value[value.length-1]) || value[value.length-1] == ".") {
         document.getElementById("displayText").innerHTML = displayValue;
     }
-    else if (item == "AC") {
+    else if (event.target.value == "AC") {
         value = "";
         displayValue = "";
         document.getElementById("displayText").innerHTML = displayValue;
@@ -51,3 +56,7 @@ const equal = () => {
     }
     document.getElementById("displayText").innerHTML = value;
 }
+
+calcButton.forEach(button => {
+    button.addEventListener('click', handleButton);
+});

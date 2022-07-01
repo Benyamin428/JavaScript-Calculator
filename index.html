@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <script src="main.js"></script>
     <title>JavaScript Calculator</title>
 </head>
 <body>
@@ -20,29 +18,31 @@
                 </div>
 
                 <div class="calculator__buttons">
-                    <button onclick="button('AC')" class="calculator__buttons-btn calculator__buttons-btn--settings">AC</button>
-                    <button onclick="button('+/-')" class="calculator__buttons-btn calculator__buttons-btn--settings">+/-</button>
-                    <button onclick="button('%')" class="calculator__buttons-btn calculator__buttons-btn--settings">%</button>
-                    <button onclick="button('/')" class="calculator__buttons-btn calculator__buttons-btn--operations">÷</button>
-                    <button onclick="button('7')" class="calculator__buttons-btn">7</button>
-                    <button onclick="button('8')" class="calculator__buttons-btn">8</button>
-                    <button onclick="button('9')" class="calculator__buttons-btn">9</button>
-                    <button onclick="button('x')" class="calculator__buttons-btn calculator__buttons-btn--operations">x</button>
-                    <button onclick="button('4')" class="calculator__buttons-btn">4</button>
-                    <button onclick="button('5')" class="calculator__buttons-btn">5</button>
-                    <button onclick="button('6')" class="calculator__buttons-btn">6</button>
-                    <button onclick="button('-')" class="calculator__buttons-btn calculator__buttons-btn--operations">-</button>
-                    <button onclick="button('1')" class="calculator__buttons-btn">1</button>
-                    <button onclick="button('2')" class="calculator__buttons-btn">2</button>
-                    <button onclick="button('3')" class="calculator__buttons-btn">3</button>
-                    <button onclick="button('+')" class="calculator__buttons-btn calculator__buttons-btn--operations">+</button>
+                    <button value="AC" class="calculator__buttons-btn calculator__buttons-btn--settings">AC</button>
+                    <button value="+/-" class="calculator__buttons-btn calculator__buttons-btn--settings">+/-</button>
+                    <button value="%" class="calculator__buttons-btn calculator__buttons-btn--settings">%</button>
+                    <button value="/" class="calculator__buttons-btn calculator__buttons-btn--operations">÷</button>
+                    <button value="7" class="calculator__buttons-btn">7</button>
+                    <button value="8" class="calculator__buttons-btn">8</button>
+                    <button value="9" class="calculator__buttons-btn">9</button>
+                    <button value="x" class="calculator__buttons-btn calculator__buttons-btn--operations">x</button>
+                    <button value="4" class="calculator__buttons-btn">4</button>
+                    <button value="5" class="calculator__buttons-btn">5</button>
+                    <button value="6" class="calculator__buttons-btn">6</button>
+                    <button value="-" class="calculator__buttons-btn calculator__buttons-btn--operations">-</button>
+                    <button value="1" class="calculator__buttons-btn">1</button>
+                    <button value="2" class="calculator__buttons-btn">2</button>
+                    <button value="3" class="calculator__buttons-btn">3</button>
+                    <button value="+" class="calculator__buttons-btn calculator__buttons-btn--operations">+</button>
                     
-                    <button onclick="button('0')" class="calculator__buttons-btn calculator__buttons-btn--elongated">0</button>
-                    <button onclick="button('.')" class="calculator__buttons-btn">.</button>
-                    <button onclick="button('=')" class="calculator__buttons-btn calculator__buttons-btn--operations">=</button>
+                    <button value="0" class="calculator__buttons-btn calculator__buttons-btn--elongated">0</button>
+                    <button value="." class="calculator__buttons-btn">.</button>
+                    <button value="=" class="calculator__buttons-btn calculator__buttons-btn--operations">=</button>
                 </div>
             </div>
         </div>
     </main>
+
+    <script src="main.js"></script>
 </body>
 </html>
