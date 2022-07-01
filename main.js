@@ -2,7 +2,7 @@ let value = "";
 let displayValue = "";
 
 const button = (item) => {
-    if (item == "+" || item == "-" || item == "x" || item == "/" || item == "=") {
+    if (item == "+" || item == "-" || item == "x" || item == "/" || item == "%" || item == "=") {
         equal();
     }
 
@@ -18,7 +18,7 @@ const button = (item) => {
         displayValue = "";
         document.getElementById("displayText").innerHTML = displayValue;
     }
-    //console.log(value);
+    console.log(value);
 }
 
 const equal = () => {
@@ -40,6 +40,10 @@ const equal = () => {
     else if (value.includes("/")) {
         const expression = value.split("/");
         value = parseFloat(expression[0]) / parseFloat(expression[1]);        
+    }
+    else if (value.includes("%")) {
+        const expression = value.split("%");
+        value = parseFloat(expression[0]/100);
     }
     else if (value.includes("=")) {
         const expression = value.split("=");
