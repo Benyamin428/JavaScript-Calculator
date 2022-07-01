@@ -2,7 +2,7 @@ let value = "";
 let displayValue = "";
 
 const button = (item) => {
-    if (item == "+" || item == "-" || item == "=") {
+    if (item == "+" || item == "-" || item == "x" || item == "/" || item == "=") {
         equal();
     }
     value+=item;
@@ -25,6 +25,14 @@ const equal = () => {
     else if (value.includes("-")) {
         const expression = value.split("-");
         value = parseFloat(expression[0]) - parseFloat(expression[1]);
+    }
+    else if (value.includes("x")) {
+        const expression = value.split("x");
+        value = parseFloat(expression[0]) * parseFloat(expression[1]);        
+    }
+    else if (value.includes("/")) {
+        const expression = value.split("/");
+        value = parseFloat(expression[0]) / parseFloat(expression[1]);        
     }
     else if (value.includes("=")) {
         const expression = value.split("=");
