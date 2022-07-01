@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,8 @@
 h1 {
   text-align: center;
   padding: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 .calculator {
@@ -22,6 +25,16 @@ h1 {
 }
 .calculator .calculator__container .calculator__screen {
   height: 10rem;
+}
+.calculator .calculator__container .calculator__screen .calculator__screen-text {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  font-size: 2.4rem;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 .calculator .calculator__container .calculator__buttons {
   display: grid;
@@ -46,6 +59,7 @@ h1 {
 }
 .calculator .calculator__container .calculator__buttons .calculator__buttons-btn--elongated {
   grid-column: span 2;
+  border-radius: 3rem;
 }
 .calculator .calculator__container .calculator__buttons .calculator__buttons-btn:hover {
   opacity: 0.5;

@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 $background-color: #000;
 
 $operations-color: #F69A06;
 $number-color: #313131;
 $settings-color: #9F9F9F;
+
+$font: 'Roboto', sans-serif;
 
 * {
     margin: 0;
@@ -13,6 +17,8 @@ $settings-color: #9F9F9F;
 h1 {
     text-align: center;
     padding: 2rem;
+    font-family: $font;
+    font-weight: 700;
 }
 
 .calculator {
@@ -28,6 +34,17 @@ h1 {
 
         .calculator__screen {
             height: 10rem;
+
+            .calculator__screen-text {
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: flex-end;
+                font-size: 2.4rem;
+                padding: 1rem;
+                font-family: $font;
+                font-weight: 300;
+            }
         }
 
         .calculator__buttons {
@@ -55,6 +72,7 @@ h1 {
 
                 &--elongated {
                     grid-column: span 2;
+                    border-radius: 3rem;
                 }
 
                 &:hover {

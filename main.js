@@ -11,12 +11,12 @@ const button = (item) => {
     
 
     if (/^-?[0-9]\d*(\.\d+)?$/.test(value[value.length-1]) || value[value.length-1] == ".") {
-        document.getElementById("displayScreen").innerHTML = displayValue;
+        document.getElementById("displayText").innerHTML = displayValue;
     }
     else if (item == "AC") {
         value = "";
         displayValue = "";
-        document.getElementById("displayScreen").innerHTML = displayValue;
+        document.getElementById("displayText").innerHTML = displayValue;
     }
     //console.log(value);
 }
@@ -45,5 +45,5 @@ const equal = () => {
         const expression = value.split("=");
         value = parseFloat(expression[0]);
     }
-    document.getElementById("displayScreen").innerHTML = value;
+    document.getElementById("displayText").innerHTML = value;
 }
