@@ -5,19 +5,26 @@ const button = (item) => {
     if (item == "+" || item == "-" || item == "x" || item == "/" || item == "=") {
         equal();
     }
+
     value+=item;
     displayValue+=item;
+    
 
-    if (/^[0-9]$/.test(value[value.length-1])) {
+    if (/^-?[0-9]\d*(\.\d+)?$/.test(value[value.length-1]) || value[value.length-1] == ".") {
         document.getElementById("displayScreen").innerHTML = displayValue;
     }
-    else {
+    else if (item == "AC") {
+        value = "";
         displayValue = "";
+        document.getElementById("displayScreen").innerHTML = displayValue;
     }
-    console.log(value);
+    //console.log(value);
 }
 
 const equal = () => {
+
+    displayValue = "";
+
     if (value.includes("+")) {
         const expression = value.split("+");
         value = parseFloat(expression[0]) + parseFloat(expression[1]);
