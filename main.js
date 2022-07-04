@@ -1,4 +1,5 @@
 const calcButton = document.querySelectorAll(".calculator__buttons-btn");
+const displayArea = document.querySelector("#displayText");
 
 //value stores the expression
 let value = "";
@@ -31,13 +32,13 @@ const handleButton = (event) => {
     //use Regex to check last value of string is a number or dot as we only want these to appear for the user
     //we dont wan't operators to be seen 
     if (/^-?[0-9]\d*(\.\d+)?$/.test(value[value.length-1]) || value[value.length-1] == ".") {
-        document.getElementById("displayText").innerHTML = displayValue;
+        displayArea.innerHTML = displayValue;
     }
     else if (event.target.value == "AC") {
         //clear the value
         value = "";
         displayValue = "";
-        document.getElementById("displayText").innerHTML = displayValue;
+        displayArea.innerHTML = displayValue;
     }
     else {
         displayValue = "";
@@ -71,7 +72,7 @@ const equal = () => {
         const expression = value.split("=");
         value = parseFloat(expression[0]);
     }
-    document.getElementById("displayText").innerHTML = value;
+    displayArea.innerHTML = value;
 }
 
 calcButton.forEach(button => {
