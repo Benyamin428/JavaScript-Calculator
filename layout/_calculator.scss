@@ -13,17 +13,27 @@
         color: #fff;
 
         .calculator__screen {
-            height: 10rem;
+            height: 7rem;
 
             .calculator__screen-text {
                 height: 100%;
                 display: flex;
                 justify-content: end;
                 align-items: flex-end;
-                font-size: 2.4rem;
+                font-size: 1.8rem;
                 padding: 1rem;
                 font-family: $font;
                 font-weight: 300;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .calculator__screen {
+                height: 10rem;
+
+                .calculator__screen-text {
+                    font-size: 2.4rem;
+                }
             }
         }
 

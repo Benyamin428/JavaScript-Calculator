@@ -18,7 +18,7 @@ h1 {
   border: none;
   color: #fff;
   background: #313131;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .calculator__buttons-btn--settings {
   background: #9F9F9F;
@@ -36,6 +36,11 @@ h1 {
   cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+  .calculator__buttons-btn {
+    font-size: 2rem;
+  }
+}
 .calculator {
   display: flex;
   align-items: center;
@@ -48,17 +53,25 @@ h1 {
   color: #fff;
 }
 .calculator .calculator__container .calculator__screen {
-  height: 10rem;
+  height: 7rem;
 }
 .calculator .calculator__container .calculator__screen .calculator__screen-text {
   height: 100%;
   display: flex;
   justify-content: end;
   align-items: flex-end;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   padding: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  .calculator .calculator__container .calculator__screen {
+    height: 10rem;
+  }
+  .calculator .calculator__container .calculator__screen .calculator__screen-text {
+    font-size: 2.4rem;
+  }
 }
 .calculator .calculator__container .calculator__buttons {
   display: grid;
