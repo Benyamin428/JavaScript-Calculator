@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+
+.calculator__buttons-btn {
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    background: $number-color;
+    font-size: 2rem;
+
+    &--settings {
+        background: $settings-color;
+        color: $background-color;
+    }
+
+    &--operations {
+        background: $operations-color;
+    }
+
+    &--elongated {
+        grid-column: span 2;
+        border-radius: 3rem;
+    }
+
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}

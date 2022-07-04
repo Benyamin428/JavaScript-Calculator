@@ -1,17 +1,18 @@
 const calcButton = document.querySelectorAll(".calculator__buttons-btn");
 
+//value stores the expression
 let value = "";
 let displayValue = "";
 
 const handleButton = (event) => {
 
-    console.log(value);
-
     if (event.target.value == "plus" || event.target.value == "minus" || event.target.value == "multiply" || event.target.value == "divide" || event.target.value == "percent" || event.target.value == "=") {
         equal();
     }
     
+    //switch between + or - 
     if (event.target.value == "switch") {
+        //check if last element in string has an "=" so that we only substring the number
         if (value.includes("=")) {
             value = parseFloat(value.substring(0, value.length-1)*-1).toString();
             displayValue = value;
@@ -22,14 +23,18 @@ const handleButton = (event) => {
         }
     }
     else {
+        //append the target value onto the value variable
         value+=event.target.value;
         displayValue+=event.target.value ;
     }
 
+    //use Regex to check last value of string is a number or dot as we only want these to appear for the user
+    //we dont wan't operators to be seen 
     if (/^-?[0-9]\d*(\.\d+)?$/.test(value[value.length-1]) || value[value.length-1] == ".") {
         document.getElementById("displayText").innerHTML = displayValue;
     }
     else if (event.target.value == "AC") {
+        //clear the value
         value = "";
         displayValue = "";
         document.getElementById("displayText").innerHTML = displayValue;
@@ -37,7 +42,6 @@ const handleButton = (event) => {
     else {
         displayValue = "";
     }
-   // console.log(value);
 }
 
 const equal = () => {
@@ -68,7 +72,6 @@ const equal = () => {
         value = parseFloat(expression[0]);
     }
     document.getElementById("displayText").innerHTML = value;
-    return;
 }
 
 calcButton.forEach(button => {

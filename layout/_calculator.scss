@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .calculator__container {
+        background: $background-color;
+        padding: 1rem;
+        color: #fff;
+
+        .calculator__screen {
+            height: 10rem;
+
+            .calculator__screen-text {
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: flex-end;
+                font-size: 2.4rem;
+                padding: 1rem;
+                font-family: $font;
+                font-weight: 300;
+            }
+        }
+
+        .calculator__buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+    }
+}
